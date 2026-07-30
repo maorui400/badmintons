@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-resolution="landscape">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1920, height=1080">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: #0b1422;
+      }
+      body { font-family: "Inter", sans-serif; }
+      #root {
+        position: relative;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: #0b1422;
+      }
+      .scene {
+        position: absolute;
+        inset: 0;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: #0b1422;
+      }
+      .scene-plate {
+        position: absolute;
+        inset: 0;
+        width: 1920px;
+        height: 1080px;
+        object-fit: cover;
+        user-select: none;
+        pointer-events: none;
+      }
+      .hand-window,
+      .worker-window {
+        position: absolute;
+        overflow: hidden;
+        border-radius: 20px;
+        pointer-events: none;
+      }
+      .hand-window .moving-copy,
+      .worker-window .moving-copy {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: 1920px 1080px;
+        will-change: transform;
+      }
+      .screen-window {
+        position: absolute;
+        overflow: hidden;
+        border-radius: 3px;
+        background: rgba(40, 215, 245, 0.07);
+        box-shadow: inset 0 0 12px rgba(232, 241, 242, 0.1);
+        opacity: 0.42;
+        will-change: opacity;
+        pointer-events: none;
+      }
+      .screen-content {
+        position: absolute;
+        inset: -8px 4px;
+        background:
+          repeating-linear-gradient(
+            to bottom,
+            rgba(232, 241, 242, 0.22) 0 2px,
+            transparent 2px 7px
+          );
+        opacity: 0.46;
+        will-change: transform, opacity;
+      }
+      .cool-vignette {
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(circle at 50% 42%, transparent 42%, rgba(9, 13, 26, 0.13) 100%);
+        pointer-events: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div data-hf-id="hf-z7xn" id="root" data-composition-id="main" data-start="0" data-duration="5" data-width="1920" data-height="1080">
+      <section data-hf-id="hf-w6gt" id="scene-1" class="clip scene" data-start="0" data-duration="1.6" data-track-index="0">
+        <img data-hf-id="hf-md3a" id="scene-1-plate" class="scene-plate" src="assets/keyframes/kf01.png" alt="">
+        <div data-hf-id="hf-h0eb" class="hand-window" style="left:642px;top:874px;width:235px;height:150px">
+          <div data-hf-id="hf-dt59" id="s1-hand-left" class="moving-copy" style="background-image:url('assets/keyframes/kf01.png');background-position:-642px -874px"></div>
+        </div>
+        <div data-hf-id="hf-jwy7" class="hand-window" style="left:1040px;top:874px;width:238px;height:150px">
+          <div data-hf-id="hf-epqr" id="s1-hand-right" class="moving-copy" style="background-image:url('assets/keyframes/kf01.png');background-position:-1040px -874px"></div>
+        </div>
+        <div data-hf-id="hf-72fq" id="screens-1"></div>
+        <div data-hf-id="hf-ovwy" class="cool-vignette"></div>
+      </section>
+
+      <section data-hf-id="hf-3kfg" id="scene-2" class="clip scene" data-start="1.6" data-duration="1.7" data-track-index="0">
+        <img data-hf-id="hf-j8ga" id="scene-2-plate" class="scene-plate" src="assets/keyframes/kf02.png" alt="">
+        <div data-hf-id="hf-5llc" class="hand-window" style="left:842px;top:622px;width:100px;height:78px">
+          <div data-hf-id="hf-bgws" id="s2-hand-left" class="moving-copy" style="background-image:url('assets/keyframes/kf02.png');background-position:-842px -622px"></div>
+        </div>
+        <div data-hf-id="hf-jh57" class="hand-window" style="left:985px;top:622px;width:105px;height:78px">
+          <div data-hf-id="hf-6fxb" id="s2-hand-right" class="moving-copy" style="background-image:url('assets/keyframes/kf02.png');background-position:-985px -622px"></div>
+        </div>
+        <div data-hf-id="hf-3bxe" class="worker-window" style="left:73px;top:619px;width:190px;height:180px">
+          <div data-hf-id="hf-t4xp" id="s2-worker-a" class="moving-copy" style="background-image:url('assets/keyframes/kf02.png');background-position:-73px -619px"></div>
+        </div>
+        <div data-hf-id="hf-maqg" class="worker-window" style="left:1645px;top:620px;width:190px;height:180px">
+          <div data-hf-id="hf-ldr2" id="s2-worker-b" class="moving-copy" style="background-image:url('assets/keyframes/kf02.png');background-position:-1645px -620px"></div>
+        </div>
+        <div data-hf-id="hf-34bp" id="screens-2"></div>
+        <div data-hf-id="hf-z1ee" class="cool-vignette"></div>
+      </section>
+
+      <section data-hf-id="hf-2n3y" id="scene-3" class="clip scene" data-start="3.3" data-duration="1.7" data-track-index="0">
+        <img data-hf-id="hf-ffjq" id="scene-3-plate" class="scene-plate" src="assets/keyframes/kf03.png" alt="">
+        <div data-hf-id="hf-zhpe" class="worker-window" style="left:225px;top:645px;width:220px;height:230px">
+          <div data-hf-id="hf-tz15" id="s3-worker-a" class="moving-copy" style="background-image:url('assets/keyframes/kf03.png');background-position:-225px -645px"></div>
+        </div>
+        <div data-hf-id="hf-2z6k" class="worker-window" style="left:820px;top:667px;width:215px;height:220px">
+          <div data-hf-id="hf-hajb" id="s3-worker-b" class="moving-copy" style="background-image:url('assets/keyframes/kf03.png');background-position:-820px -667px"></div>
+        </div>
+        <div data-hf-id="hf-os20" class="worker-window" style="left:1260px;top:650px;width:220px;height:225px">
+          <div data-hf-id="hf-9k2v" id="s3-worker-c" class="moving-copy" style="background-image:url('assets/keyframes/kf03.png');background-position:-1260px -650px"></div>
+        </div>
+        <div data-hf-id="hf-2cnw" id="screens-3"></div>
+        <div data-hf-id="hf-zfpf" class="cool-vignette"></div>
+      </section>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      const screenLayouts = {
+        "screens-1": [
+          [188, 260, 110, 67, 0.03], [354, 214, 54, 40, 0.19],
+          [1304, 245, 116, 68, 0.11], [1532, 194, 60, 43, 0.27]
+        ],
+        "screens-2": [
+          [275, 289, 104, 60, 0.04], [880, 151, 98, 48, 0.16],
+          [1388, 288, 111, 65, 0.25], [1470, 598, 157, 95, 0.09],
+          [179, 596, 156, 96, 0.31], [612, 173, 83, 45, 0.21],
+          [1228, 176, 88, 46, 0.37]
+        ],
+        "screens-3": [
+          [128, 468, 104, 57, 0.04], [405, 405, 91, 51, 0.18],
+          [662, 369, 77, 43, 0.29], [908, 421, 70, 39, 0.11],
+          [1164, 393, 81, 45, 0.34], [1449, 435, 97, 54, 0.23],
+          [1691, 457, 111, 61, 0.07], [346, 623, 133, 72, 0.38],
+          [824, 649, 128, 69, 0.14], [1322, 625, 139, 76, 0.27],
+          [1750, 643, 142, 77, 0.43], [598, 286, 63, 35, 0.09],
+          [1056, 284, 64, 35, 0.31], [1510, 303, 74, 39, 0.20]
+        ]
+      };
+
+      Object.entries(screenLayouts).forEach(([hostId, items]) => {
+        const host = document.getElementById(hostId);
+        items.forEach(([x, y, w, h, phase], index) => {
+          const screen = document.createElement("div");
+          screen.className = "screen-window";
+          screen.id = `${hostId}-screen-${index}`;
+          screen.style.left = `${x}px`;
+          screen.style.top = `${y}px`;
+          screen.style.width = `${w}px`;
+          screen.style.height = `${h}px`;
+          const content = document.createElement("div");
+          content.className = "screen-content";
+          content.id = `${hostId}-content-${index}`;
+          screen.appendChild(content);
+          host.appendChild(screen);
+          screen.dataset.phase = String(phase);
+        });
+      });
+
+      const typeLoop = (selector, start, step, repeats, xA, yA, xB, yB) => {
+        tl.fromTo(
+          selector,
+          { x: xA, y: yA },
+          {
+            x: xB, y: yB, duration: step, ease: "sine.inOut",
+            yoyo: true, repeat: repeats, immediateRender: false
+          },
+          start
+        );
+      };
+
+      typeLoop("#s1-hand-left", 0, 0.16, 9, -0.4, 0, 0.8, -1.1);
+      typeLoop("#s1-hand-right", 0, 0.20, 7, 0.5, -0.2, -0.7, -1.0);
+      typeLoop("#s2-hand-left", 1.6, 0.17, 9, -0.3, 0, 0.7, -0.9);
+      typeLoop("#s2-hand-right", 1.6, 0.2125, 7, 0.4, -0.1, -0.6, -0.8);
+      typeLoop("#s2-worker-a", 1.6, 0.283, 5, -0.2, 0, 0.5, -0.7);
+      typeLoop("#s2-worker-b", 1.6, 0.242, 6, 0.3, -0.1, -0.4, -0.6);
+      typeLoop("#s3-worker-a", 3.3, 0.34, 4, -0.2, 0, 0.4, -0.5);
+      typeLoop("#s3-worker-b", 3.3, 0.283, 5, 0.2, -0.1, -0.3, -0.5);
+      typeLoop("#s3-worker-c", 3.3, 0.242, 6, -0.2, 0, 0.3, -0.4);
+
+      const sceneWindows = [
+        ["#screens-1 .screen-window", "#screens-1 .screen-content", 0, 1.6],
+        ["#screens-2 .screen-window", "#screens-2 .screen-content", 1.6, 1.7],
+        ["#screens-3 .screen-window", "#screens-3 .screen-content", 3.3, 1.7]
+      ];
+
+      sceneWindows.forEach(([screenSelector, contentSelector, start, duration]) => {
+        gsap.utils.toArray(screenSelector).forEach((screen, index) => {
+          const phase = Number(screen.dataset.phase) || 0;
+          const pulseDur = 0.34 + (index % 4) * 0.07;
+          const active = Math.max(0.1, duration - phase);
+          const repeats = Math.max(0, Math.floor(active / pulseDur) - 1);
+          tl.fromTo(
+            screen,
+            { opacity: 0.36 + (index % 3) * 0.025 },
+            {
+              opacity: 0.46 + (index % 2) * 0.035,
+              duration: pulseDur,
+              ease: "sine.inOut",
+              yoyo: true,
+              repeat: repeats,
+              immediateRender: false
+            },
+            start + phase
+          );
+        });
+
+        gsap.utils.toArray(contentSelector).forEach((content, index) => {
+          tl.fromTo(
+            content,
+            { y: 0, opacity: 0.38 + (index % 2) * 0.04 },
+            {
+              y: -3 - (index % 3),
+              opacity: 0.5,
+              duration,
+              ease: "none",
+              immediateRender: false
+            },
+            start
+          );
+        });
+      });
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>
