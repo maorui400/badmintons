@@ -1,0 +1,41 @@
+{
+  "provider": "Volcengine TOS",
+  "region": "cn-beijing",
+  "endpoint": "tos-cn-beijing.volces.com",
+  "bucket": "badmintons-seedance-ep01-20260803-2d478874",
+  "acl": "private",
+  "objects": [
+    {
+      "asset_id": "CHAR-001-TURNAROUND-v003",
+      "object_key": "seedance/EP01/SHOT-001/refs/CHAR-001_turnaround_v003_COST-B_001.png",
+      "local_path": "人物/CHAR-001_铁蛋/三视图/CHAR-001_turnaround_v003_COST-B_001.png",
+      "size_bytes": 2258307,
+      "sha256": "bf6a7fc5181a527e7595936f8a60a286ea5fe9feb9ec197080718f68d59a4bb1",
+      "tos_etag": "54d52f504f8fecb8d5261427f573b218"
+    },
+    {
+      "asset_id": "SHOT-001-KF01-v001",
+      "object_key": "seedance/EP01/SHOT-001/refs/SHOT-001_KF01_v001.png",
+      "local_path": "分镜/SHOT-001_工位拉远/关键帧/SHOT-001_KF01_v001.png",
+      "size_bytes": 1884037,
+      "sha256": "c6b522d562a7cb8ffcac953520e06fd8800539b6fb1272d8bc5e3f5cddf873ab",
+      "tos_etag": "3462f094ece8153593df83070b4d9284"
+    },
+    {
+      "asset_id": "SHOT-001-KF02-v001",
+      "object_key": "seedance/EP01/SHOT-001/refs/SHOT-001_KF02_v001.png",
+      "local_path": "分镜/SHOT-001_工位拉远/关键帧/SHOT-001_KF02_v001.png",
+      "size_bytes": 1841157,
+      "sha256": "8ef81ecfd297ed5398328bc19a8e7c46ae72c5ddfe6ce57d555bdcde3d550e72",
+      "tos_etag": "689a69de8b4b3ffc079be4f65457f1b9"
+    },
+    {
+      "asset_id": "SHOT-001-KF03-v001",
+      "object_key": "seedance/EP01/SHOT-001/refs/SHOT-001_KF03_v001.png",
+      "local_path": "分镜/SHOT-001_工位拉远/关键帧/SHOT-001_KF03_v001.png",
+      "size_bytes": 1983357,
+      "sha256": "78866be5d640d8f63630246d59beb42966a509ee6055c28721032b7ac5a5af0e",
+      "tos_etag": "1628b6d4683b7c6c2bb0aa8146cfaab3"
+    }
+  ]
+}

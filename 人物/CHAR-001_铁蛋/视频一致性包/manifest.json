@@ -1,0 +1,42 @@
+{
+  "character_id": "CHAR-001",
+  "character_version": "v003",
+  "style_version": "STYLE-v002",
+  "default_costume": "COST-B",
+  "status": "FOUNDATION-READY",
+  "locked_references": [
+    {
+      "asset_id": "CHAR-001-TURNAROUND-v003",
+      "local_path": "人物/CHAR-001_铁蛋/三视图/CHAR-001_turnaround_v003_COST-B_001.png",
+      "remote_uri": ""
+    }
+  ],
+  "costume_assets": [
+    "TOP-001 v001",
+    "BOTTOM-001 v001",
+    "SHOE-001 v001"
+  ],
+  "equipment_assets": [
+    "RACKET-001 v001"
+  ],
+  "expression_assets": [
+    "EXP-001",
+    "EXP-002",
+    "EXP-003",
+    "EXP-004",
+    "EXP-005",
+    "EXP-006"
+  ],
+  "pending_action_assets": [
+    "HEAD-045-L",
+    "HEAD-045-R",
+    "BACK-TAIL",
+    "GRIP-FH",
+    "GRIP-BH",
+    "ACTION-SPLITSTEP",
+    "ACTION-NET-LUNGE",
+    "ACTION-SMASH-LOAD",
+    "ACTION-SMASH-CONTACT",
+    "ACTION-SMASH-LAND"
+  ]
+}

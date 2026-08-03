@@ -1,0 +1,25 @@
+{
+  "shot_id": "SHOT-001",
+  "status": "NOT_RUN",
+  "technical": {
+    "decodable": null,
+    "duration_ok": null,
+    "resolution_ok": null,
+    "fps_ok": null,
+    "black_frames": null,
+    "freeze_frames": null,
+    "flash_risk": null
+  },
+  "visual_score": {
+    "identity": null,
+    "fur": null,
+    "costume_equipment": null,
+    "motion": null,
+    "style": null,
+    "color": null,
+    "continuity": null,
+    "total": null
+  },
+  "vetoes": [],
+  "notes": []
+}

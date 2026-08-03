@@ -1,0 +1,30 @@
+{
+  "pipeline_version": "SEEDANCE-PIPELINE-v001",
+  "episode_id": "EP01",
+  "title": "工位众生",
+  "status": "PROMPT-READY",
+  "defaults": {
+    "model": "doubao-seedance-2-0-fast-260128",
+    "ratio": "16:9",
+    "duration": 5,
+    "resolution": "720p",
+    "generate_audio": false,
+    "return_last_frame": true
+  },
+  "api": {
+    "base_url": "https://ark.cn-beijing.volces.com/api/v3",
+    "callback_url": ""
+  },
+  "shots": [
+    {
+      "shot_id": "SHOT-001",
+      "enabled": true,
+      "status": "PROMPT-READY",
+      "shot_file": "SHOTS/SHOT-001/shot.json",
+      "prompt_file": "SHOTS/SHOT-001/prompt.md",
+      "assets_file": "SHOTS/SHOT-001/assets.json",
+      "depends_on": [],
+      "continuity_from": null
+    }
+  ]
+}

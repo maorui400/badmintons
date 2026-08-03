@@ -1,0 +1,26 @@
+{
+  "shot_id": "SHOT-001",
+  "title": "工位拉远",
+  "story_purpose": "让铁蛋从具体个体逐步变成庞大办公系统中的一点",
+  "duration": 5,
+  "ratio": "16:9",
+  "resolution": "720p",
+  "model": "doubao-seedance-2-0-fast-260128",
+  "generate_audio": false,
+  "return_last_frame": true,
+  "style_id": "NEON-SHUTTLE-CATS",
+  "style_version": "STYLE-v002",
+  "character_bindings": [
+    "CHAR-001 v003"
+  ],
+  "costume_bindings": [
+    "COST-OFFICE-A / DRAFT"
+  ],
+  "equipment_bindings": [
+    "RIGHT-WRIST-MATTE-BLACK-WATCH"
+  ],
+  "color_mode": "MODE-DAY-HARSH / OFFICE-COOL-WHITE",
+  "camera_system": "CAMERA-v001",
+  "keyframe_status": "KEYFRAME-LOCK-v001",
+  "status": "PROMPT-READY"
+}

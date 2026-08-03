@@ -1,0 +1,15 @@
+{
+  "references": [
+    {
+      "label": "图片1",
+      "purpose": "角色锁定参考",
+      "role": "reference_image",
+      "local_path": "",
+      "remote_uri": ""
+    }
+  ],
+  "first_frame": null,
+  "last_frame": null,
+  "action_videos": [],
+  "reference_audio": []
+}

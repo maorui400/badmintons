@@ -1,0 +1,20 @@
+{
+  "shot_id": "SHOT-001",
+  "title": "待填写",
+  "story_purpose": "待填写",
+  "duration": 5,
+  "ratio": "16:9",
+  "resolution": "720p",
+  "model": "doubao-seedance-2-0-260128",
+  "generate_audio": false,
+  "return_last_frame": true,
+  "style_id": "NEON-SHUTTLE-CATS",
+  "style_version": "STYLE-v002",
+  "character_bindings": [],
+  "costume_bindings": [],
+  "equipment_bindings": [],
+  "color_mode": "MODE-NIGHT-CYAN-RED",
+  "camera_system": "CAMERA-v001",
+  "keyframe_status": "MISSING",
+  "status": "PLANNED"
+}

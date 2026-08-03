@@ -1,0 +1,36 @@
+{
+  "references": [
+    {
+      "label": "图片1",
+      "purpose": "铁蛋 v003 锁定身份、毛纹和体型参考",
+      "role": "reference_image",
+      "local_path": "人物/CHAR-001_铁蛋/三视图/CHAR-001_turnaround_v003_COST-B_001.png",
+      "remote_uri": ""
+    },
+    {
+      "label": "图片2",
+      "purpose": "0.00秒近中景构图和办公服参考",
+      "role": "reference_image",
+      "local_path": "分镜/SHOT-001_工位拉远/关键帧/SHOT-001_KF01_v001.png",
+      "remote_uri": ""
+    },
+    {
+      "label": "图片3",
+      "purpose": "1.60秒中远景构图参考",
+      "role": "reference_image",
+      "local_path": "分镜/SHOT-001_工位拉远/关键帧/SHOT-001_KF02_v001.png",
+      "remote_uri": ""
+    },
+    {
+      "label": "图片4",
+      "purpose": "3.30秒超远景构图和末帧参考",
+      "role": "reference_image",
+      "local_path": "分镜/SHOT-001_工位拉远/关键帧/SHOT-001_KF03_v001.png",
+      "remote_uri": ""
+    }
+  ],
+  "first_frame": null,
+  "last_frame": null,
+  "action_videos": [],
+  "reference_audio": []
+}
