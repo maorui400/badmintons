@@ -1,0 +1,11 @@
+{
+  "references": [
+    {"label":"图片1","purpose":"铁蛋 v003 锁定身份、毛纹、体型、服装和装备","role":"reference_image","local_path":"人物/CHAR-001_铁蛋/三视图/CHAR-001_turnaround_v003_COST-B_001.png","remote_uri":""},
+    {"label":"图片2","purpose":"SCENE-HALL-001 主场轴线与场边区域","role":"reference_image","local_path":"分镜/SCENE-HALL-001_球馆/关键帧/SCENE-HALL-001_court-axis_v001.png","remote_uri":""},
+    {"label":"图片3","purpose":"SHOT-004 v002 转头、自然小跑、减速准备姿态联系表，按左到右理解时间顺序","role":"reference_image","local_path":"分镜/SHOT-004_应声上场/关键帧/SHOT-004_keyframe-sheet_v002.png","remote_uri":""}
+  ],
+  "first_frame": null,
+  "last_frame": null,
+  "action_videos": [],
+  "reference_audio": []
+}

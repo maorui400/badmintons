@@ -6,36 +6,94 @@
   "acl": "private",
   "objects": [
     {
-      "asset_id": "CHAR-001-TURNAROUND-v003",
-      "object_key": "seedance/EP01/SHOT-001/refs/CHAR-001_turnaround_v003_COST-B_001.png",
+      "asset_id": "SHOT-002-REF-01-bf6a7fc5",
+      "object_key": "seedance/EP01/shared/bf6a7fc5181a527e/CHAR-001_turnaround_v003_COST-B_001.png",
       "local_path": "人物/CHAR-001_铁蛋/三视图/CHAR-001_turnaround_v003_COST-B_001.png",
       "size_bytes": 2258307,
       "sha256": "bf6a7fc5181a527e7595936f8a60a286ea5fe9feb9ec197080718f68d59a4bb1",
+      "content_type": "image/png",
       "tos_etag": "54d52f504f8fecb8d5261427f573b218"
     },
     {
-      "asset_id": "SHOT-001-KF01-v001",
-      "object_key": "seedance/EP01/SHOT-001/refs/SHOT-001_KF01_v001.png",
-      "local_path": "分镜/SHOT-001_工位拉远/关键帧/SHOT-001_KF01_v001.png",
-      "size_bytes": 1884037,
-      "sha256": "c6b522d562a7cb8ffcac953520e06fd8800539b6fb1272d8bc5e3f5cddf873ab",
-      "tos_etag": "3462f094ece8153593df83070b4d9284"
+      "asset_id": "SHOT-002-REF-02-694f28a1",
+      "object_key": "seedance/EP01/shared/694f28a15304d9d7/SCENE-HALL-001_master_v001.png",
+      "local_path": "分镜/SCENE-HALL-001_球馆/关键帧/SCENE-HALL-001_master_v001.png",
+      "size_bytes": 907435,
+      "sha256": "694f28a15304d9d747dc0cc47590b40936c62281fccea14fb94d54b7854dcfb8",
+      "content_type": "image/png",
+      "tos_etag": "f80bc0875cf7c8fae82af08a01355167"
     },
     {
-      "asset_id": "SHOT-001-KF02-v001",
-      "object_key": "seedance/EP01/SHOT-001/refs/SHOT-001_KF02_v001.png",
-      "local_path": "分镜/SHOT-001_工位拉远/关键帧/SHOT-001_KF02_v001.png",
-      "size_bytes": 1841157,
-      "sha256": "8ef81ecfd297ed5398328bc19a8e7c46ae72c5ddfe6ce57d555bdcde3d550e72",
-      "tos_etag": "689a69de8b4b3ffc079be4f65457f1b9"
+      "asset_id": "SHOT-002-REF-03-40ea3e4f",
+      "object_key": "seedance/EP01/shared/40ea3e4fa9573c4a/SHOT-002_keyframe-sheet_v001.png",
+      "local_path": "分镜/SHOT-002_推门见球馆/关键帧/SHOT-002_keyframe-sheet_v001.png",
+      "size_bytes": 1739050,
+      "sha256": "40ea3e4fa9573c4acacf4c07fca342a8a035c7a899db01bc4889f001eed6d9cc",
+      "content_type": "image/png",
+      "tos_etag": "a549b7ccd81ed7e4254622be120ffa38"
     },
     {
-      "asset_id": "SHOT-001-KF03-v001",
-      "object_key": "seedance/EP01/SHOT-001/refs/SHOT-001_KF03_v001.png",
-      "local_path": "分镜/SHOT-001_工位拉远/关键帧/SHOT-001_KF03_v001.png",
-      "size_bytes": 1983357,
-      "sha256": "78866be5d640d8f63630246d59beb42966a509ee6055c28721032b7ac5a5af0e",
-      "tos_etag": "1628b6d4683b7c6c2bb0aa8146cfaab3"
+      "asset_id": "SHOT-003-REF-02-e850071e",
+      "object_key": "seedance/EP01/shared/e850071ec664fdf5/SCENE-HALL-001_sideline_v001.png",
+      "local_path": "分镜/SCENE-HALL-001_球馆/关键帧/SCENE-HALL-001_sideline_v001.png",
+      "size_bytes": 1030239,
+      "sha256": "e850071ec664fdf5fef19f79ff689cf6e5c6f374904b5c2988a67409c3925a2b",
+      "content_type": "image/png",
+      "tos_etag": "68f88d27f56a16be2474150bc49edb5d"
+    },
+    {
+      "asset_id": "SHOT-003-REF-03-b9a0ca43",
+      "object_key": "seedance/EP01/shared/b9a0ca4355824948/SHOT-003_keyframe-sheet_v001.png",
+      "local_path": "分镜/SHOT-003_场边热身/关键帧/SHOT-003_keyframe-sheet_v001.png",
+      "size_bytes": 1998668,
+      "sha256": "b9a0ca4355824948c4f57e92f48bef5ae2d8012d37c75f00d2059080378ec5a7",
+      "content_type": "image/png",
+      "tos_etag": "534d42e0c1ea71bfa907b182140e4622"
+    },
+    {
+      "asset_id": "SHOT-004-REF-02-082b0dd1",
+      "object_key": "seedance/EP01/shared/082b0dd1a2e31ec3/SCENE-HALL-001_court-axis_v001.png",
+      "local_path": "分镜/SCENE-HALL-001_球馆/关键帧/SCENE-HALL-001_court-axis_v001.png",
+      "size_bytes": 934221,
+      "sha256": "082b0dd1a2e31ec3f9f589e4d507cc3dd5b1c96a6279ba044486288d517a913d",
+      "content_type": "image/png",
+      "tos_etag": "8752298b31ed2964a1d2f2ef5a29068c"
+    },
+    {
+      "asset_id": "SHOT-004-REF-03-0d967210",
+      "object_key": "seedance/EP01/shared/0d9672109fd3610d/SHOT-004_keyframe-sheet_v001.png",
+      "local_path": "分镜/SHOT-004_应声上场/关键帧/SHOT-004_keyframe-sheet_v001.png",
+      "size_bytes": 1945061,
+      "sha256": "0d9672109fd3610deee7cf95864dc6a1bab201ac7f41ecfcae3209fd8eae846a",
+      "content_type": "image/png",
+      "tos_etag": "8ca1d6cc471a6c56059d58a0a192d14a"
+    },
+    {
+      "asset_id": "SHOT-005-REF-01-97f92a6e",
+      "object_key": "seedance/EP01/shared/97f92a6ece39c371/CHAR-002_turnaround_v001_COST-C_001.png",
+      "local_path": "人物/CHAR-002_橙超/三视图/CHAR-002_turnaround_v001_COST-C_001.png",
+      "size_bytes": 2038959,
+      "sha256": "97f92a6ece39c3716e4b6e04bf26c40339b294794f150d499cd84cc91ac48fc8",
+      "content_type": "image/png",
+      "tos_etag": "0fc66de8360251004b0557af99bab35b"
+    },
+    {
+      "asset_id": "SHOT-005-REF-04-869a8900",
+      "object_key": "seedance/EP01/shared/869a8900510ec586/SHOT-005_smash-sequence_v003.png",
+      "local_path": "分镜/SHOT-005_挑球被钉/关键帧/SHOT-005_smash-sequence_v003.png",
+      "size_bytes": 2827030,
+      "sha256": "869a8900510ec586dcafb01fc2d78ab554463ab0f700a1952ab10187493ab601",
+      "content_type": "image/png",
+      "tos_etag": "961cac5c7cb24b716364f22f84a9d47f"
+    },
+    {
+      "asset_id": "SHOT-006-REF-03-1c9b7069",
+      "object_key": "seedance/EP01/shared/1c9b70698abc31d4/SHOT-006_keyframe-sheet_v001.png",
+      "local_path": "分镜/SHOT-006_杀球钉地/关键帧/SHOT-006_keyframe-sheet_v001.png",
+      "size_bytes": 2538243,
+      "sha256": "1c9b70698abc31d423c59e9762cdae6814cb90693a252de74620720b31c4876d",
+      "content_type": "image/png",
+      "tos_etag": "2da04004c981337deee54d5828bba9de"
     }
   ]
 }

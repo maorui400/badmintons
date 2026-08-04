@@ -1,0 +1,12 @@
+{
+  "references": [
+    {"label":"图片1","purpose":"橙超 v001 锁定角色、服装和装备","role":"reference_image","local_path":"人物/CHAR-002_橙超/三视图/CHAR-002_turnaround_v001_COST-C_001.png","remote_uri":""},
+    {"label":"图片2","purpose":"铁蛋 v003 锁定远场角色、服装和装备","role":"reference_image","local_path":"人物/CHAR-001_铁蛋/三视图/CHAR-001_turnaround_v003_COST-B_001.png","remote_uri":""},
+    {"label":"图片3","purpose":"SCENE-HALL-001 场地轴线","role":"reference_image","local_path":"分镜/SCENE-HALL-001_球馆/关键帧/SCENE-HALL-001_court-axis_v001.png","remote_uri":""},
+    {"label":"图片4","purpose":"ACTION-SMASH-v001 六阶段16:9关键帧联系表，按左到右、上到下理解P1至P6","role":"reference_image","local_path":"分镜/SHOT-005_挑球被钉/关键帧/SHOT-005_smash-sequence_v003.png","remote_uri":""}
+  ],
+  "first_frame": null,
+  "last_frame": null,
+  "action_videos": [],
+  "reference_audio": []
+}

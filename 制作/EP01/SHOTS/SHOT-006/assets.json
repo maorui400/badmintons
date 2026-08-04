@@ -1,0 +1,11 @@
+{
+  "references": [
+    {"label":"图片1","purpose":"铁蛋 v003 身份、服装、装备与 EXP-003 锚点","role":"reference_image","local_path":"人物/CHAR-001_铁蛋/三视图/CHAR-001_turnaround_v003_COST-B_001.png","remote_uri":""},
+    {"label":"图片2","purpose":"SCENE-HALL-001 场地、白线和光线","role":"reference_image","local_path":"分镜/SCENE-HALL-001_球馆/关键帧/SCENE-HALL-001_court-axis_v001.png","remote_uri":""},
+    {"label":"图片3","purpose":"SHOT-006 球头触地、错愕进入、E4峰值、回弹四帧联系表","role":"reference_image","local_path":"分镜/SHOT-006_杀球钉地/关键帧/SHOT-006_keyframe-sheet_v001.png","remote_uri":""}
+  ],
+  "first_frame": null,
+  "last_frame": null,
+  "action_videos": [],
+  "reference_audio": []
+}

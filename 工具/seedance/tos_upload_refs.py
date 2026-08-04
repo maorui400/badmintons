@@ -1,53 +1,32 @@
 #!/usr/bin/env python3
-"""Create a private TOS bucket, upload SHOT-001 refs, and mint signed URLs."""
+"""Upload deduplicated assets for the currently enabled EP01 shots and mint signed URLs."""
 
 from __future__ import annotations
 
 import hashlib
 import json
+import mimetypes
 import os
 import secrets
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
+from typing import Any
 
 import tos
 
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
+EPISODE_DIR = REPO_ROOT / "制作" / "EP01"
+BATCH_PATH = EPISODE_DIR / "EP01_批次清单.json"
 ENDPOINT = "tos-cn-beijing.volces.com"
 REGION = "cn-beijing"
 URL_TTL_SECONDS = 72 * 60 * 60
-STATE_PATH = REPO_ROOT / "\u5236\u4f5c" / "EP01" / "tos_storage.json"
-RUNTIME_PATH = (
-    REPO_ROOT
-    / "\u5236\u4f5c"
-    / "EP01"
-    / "runtime"
-    / "tos_assets.resolved.json"
-)
+STATE_PATH = EPISODE_DIR / "tos_storage.json"
+RUNTIME_PATH = EPISODE_DIR / "runtime" / "tos_assets.resolved.json"
 
-SOURCES = [
-    {
-        "asset_id": "CHAR-001-TURNAROUND-v003",
-        "local_path": "\u4eba\u7269/CHAR-001_\u94c1\u86cb/\u4e09\u89c6\u56fe/CHAR-001_turnaround_v003_COST-B_001.png",
-        "object_key": "seedance/EP01/SHOT-001/refs/CHAR-001_turnaround_v003_COST-B_001.png",
-    },
-    {
-        "asset_id": "SHOT-001-KF01-v001",
-        "local_path": "\u5206\u955c/SHOT-001_\u5de5\u4f4d\u62c9\u8fdc/\u5173\u952e\u5e27/SHOT-001_KF01_v001.png",
-        "object_key": "seedance/EP01/SHOT-001/refs/SHOT-001_KF01_v001.png",
-    },
-    {
-        "asset_id": "SHOT-001-KF02-v001",
-        "local_path": "\u5206\u955c/SHOT-001_\u5de5\u4f4d\u62c9\u8fdc/\u5173\u952e\u5e27/SHOT-001_KF02_v001.png",
-        "object_key": "seedance/EP01/SHOT-001/refs/SHOT-001_KF02_v001.png",
-    },
-    {
-        "asset_id": "SHOT-001-KF03-v001",
-        "local_path": "\u5206\u955c/SHOT-001_\u5de5\u4f4d\u62c9\u8fdc/\u5173\u952e\u5e27/SHOT-001_KF03_v001.png",
-        "object_key": "seedance/EP01/SHOT-001/refs/SHOT-001_KF03_v001.png",
-    },
-]
+
+def read_json(path: Path) -> dict[str, Any]:
+    return json.loads(path.read_text(encoding="utf-8"))
 
 
 def write_json(path: Path, value: object) -> None:
@@ -68,11 +47,52 @@ def sha256_file(path: Path) -> str:
 
 def load_or_make_bucket_name() -> str:
     if STATE_PATH.exists():
-        state = json.loads(STATE_PATH.read_text(encoding="utf-8"))
+        state = read_json(STATE_PATH)
         if state.get("bucket"):
-            return state["bucket"]
+            return str(state["bucket"])
     date_part = datetime.now(timezone.utc).strftime("%Y%m%d")
     return f"badmintons-seedance-ep01-{date_part}-{secrets.token_hex(4)}"
+
+
+def collect_asset_entries(assets: dict[str, Any]) -> list[dict[str, Any]]:
+    entries: list[dict[str, Any]] = []
+    entries.extend(assets.get("references") or [])
+    for key in ("first_frame", "last_frame"):
+        if assets.get(key):
+            entries.append(assets[key])
+    entries.extend(assets.get("action_videos") or [])
+    entries.extend(assets.get("reference_audio") or [])
+    return entries
+
+
+def collect_enabled_sources() -> list[dict[str, str]]:
+    batch = read_json(BATCH_PATH)
+    by_local_path: dict[str, dict[str, str]] = {}
+    for shot in batch.get("shots") or []:
+        if not shot.get("enabled", True):
+            continue
+        shot_id = str(shot["shot_id"])
+        assets_path = EPISODE_DIR / str(shot["assets_file"])
+        assets = read_json(assets_path)
+        for index, asset in enumerate(collect_asset_entries(assets), start=1):
+            local_path = str(asset.get("local_path") or "").replace("\\", "/")
+            if not local_path:
+                continue
+            local = REPO_ROOT / local_path
+            if not local.is_file():
+                raise FileNotFoundError(local)
+            if local_path in by_local_path:
+                continue
+            digest = sha256_file(local)
+            by_local_path[local_path] = {
+                "asset_id": f"{shot_id}-REF-{index:02d}-{digest[:8]}",
+                "local_path": local_path,
+                "object_key": f"seedance/EP01/shared/{digest[:16]}/{local.name}",
+                "sha256": digest,
+            }
+    if not by_local_path:
+        raise RuntimeError("No assets were found for enabled shots.")
+    return list(by_local_path.values())
 
 
 def main() -> int:
@@ -81,11 +101,7 @@ def main() -> int:
     if not ak or not sk:
         raise RuntimeError("TOS credentials are not available in this process.")
 
-    for source in SOURCES:
-        local = REPO_ROOT / source["local_path"]
-        if not local.is_file():
-            raise FileNotFoundError(local)
-
+    sources = collect_enabled_sources()
     client = tos.TosClientV2(ak, sk, ENDPOINT, REGION)
     bucket = load_or_make_bucket_name()
     if not STATE_PATH.exists():
@@ -94,13 +110,14 @@ def main() -> int:
     expires_at = datetime.now(timezone.utc) + timedelta(seconds=URL_TTL_SECONDS)
     persistent_objects = []
     resolved_assets = []
-    for source in SOURCES:
+    for source in sources:
         local = REPO_ROOT / source["local_path"]
+        content_type = mimetypes.guess_type(local.name)[0] or "application/octet-stream"
         client.put_object_from_file(
             bucket,
             source["object_key"],
             str(local),
-            content_type="image/png",
+            content_type=content_type,
             forbid_overwrite=False,
         )
         head = client.head_object(bucket, source["object_key"])
@@ -110,14 +127,14 @@ def main() -> int:
             source["object_key"],
             expires=URL_TTL_SECONDS,
         )
-        size = local.stat().st_size
         persistent_objects.append(
             {
                 "asset_id": source["asset_id"],
                 "object_key": source["object_key"],
                 "local_path": source["local_path"],
-                "size_bytes": size,
-                "sha256": sha256_file(local),
+                "size_bytes": local.stat().st_size,
+                "sha256": source["sha256"],
+                "content_type": content_type,
                 "tos_etag": getattr(head, "etag", None),
             }
         )
@@ -162,6 +179,7 @@ def main() -> int:
                 "state_file": str(STATE_PATH),
                 "runtime_file": str(RUNTIME_PATH),
             },
+            ensure_ascii=False,
             indent=2,
         )
     )

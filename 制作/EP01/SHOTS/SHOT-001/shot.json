@@ -8,13 +8,20 @@
   "model": "doubao-seedance-2-0-fast-260128",
   "generate_audio": false,
   "return_last_frame": true,
+  "revision": "HARD-CUT-v002",
+  "edit_pattern": "three locked-off cameras with abrupt one-frame hard cuts",
+  "cut_points_seconds": [
+    1.6,
+    3.3
+  ],
+  "continuous_camera_motion": false,
   "style_id": "NEON-SHUTTLE-CATS",
   "style_version": "STYLE-v002",
   "character_bindings": [
     "CHAR-001 v003"
   ],
   "costume_bindings": [
-    "COST-OFFICE-A / DRAFT"
+    "COST-OFFICE-A / SHOT-001-LOCKED-v001"
   ],
   "equipment_bindings": [
     "RIGHT-WRIST-MATTE-BLACK-WATCH"
@@ -22,5 +29,20 @@
   "color_mode": "MODE-DAY-HARSH / OFFICE-COOL-WHITE",
   "camera_system": "CAMERA-v001",
   "keyframe_status": "KEYFRAME-LOCK-v001",
-  "status": "PROMPT-READY"
+  "locked_asset": {
+    "asset_id": "SHOT-001-SEEDANCE-FAST-v002-HARDCUT",
+    "path": "视频/SHOT-001_工位拉远/renders/SHOT-001_seedance_fast_v002_hardcut.mp4",
+    "duration_seconds": 4.83,
+    "resolution": "1280x720",
+    "frame_rate": 24,
+    "video_codec": "H.264 High",
+    "audio": false,
+    "cut_points_seconds": [
+      1.583,
+      3.292
+    ],
+    "sha256": "df9971184b0ff35da2f833f4732879a4a52de0c7359280c59e899fb1586cccf3",
+    "size_bytes": 1544485
+  },
+  "status": "LOCKED"
 }

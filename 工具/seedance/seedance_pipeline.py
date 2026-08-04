@@ -417,7 +417,10 @@ def query_status(batch_path: Path, approval: str | None) -> dict[str, Any]:
 def download_results(batch_path: Path, approval: str | None) -> dict[str, Any]:
     api_key = require_api_approval(approval)
     del api_key
-    _, batch_dir = load_batch(batch_path)
+    batch, batch_dir = load_batch(batch_path)
+    enabled_shot_ids = {
+        shot["shot_id"] for shot in batch.get("shots", []) if shot.get("enabled", True)
+    }
     state_path = batch_dir / "_build" / "state" / "registry.json"
     if not state_path.exists():
         raise PipelineError("没有任务状态记录")
@@ -425,6 +428,8 @@ def download_results(batch_path: Path, approval: str | None) -> dict[str, Any]:
     output_dir = batch_dir / "_build" / "outputs"
     downloaded: list[str] = []
     for shot_id, task in state.get("tasks", {}).items():
+        if shot_id not in enabled_shot_ids:
+            continue
         result = task.get("last_result") or {}
         if result.get("status") != "succeeded":
             continue
