@@ -8,7 +8,7 @@
   "model": "doubao-seedance-2-0-fast-260128",
   "generate_audio": true,
   "return_last_frame": true,
-  "revision": "BOARD-v002 / HAND-CONTINUITY-v002",
+  "revision": "BOARD-v002 / HAND-CONTINUITY-v003",
   "edit_pattern": "single reveal with locked ending camera",
   "cut_points_seconds": [],
   "continuous_camera_motion": false,
@@ -19,7 +19,7 @@
   "equipment_bindings": ["SHOE-001 v001", "RACKET-001 v001", "RIGHT-WRIST-MATTE-BLACK-WATCH"],
   "scene_binding": "SCENE-HALL-001 / ENV-v001",
   "camera_system": "ARCHITECTURE-EDGE + P1",
-  "keyframe_status": "QC-CANDIDATE-v002",
-  "readiness_blockers": ["USER-KEYFRAME-APPROVAL-PENDING", "NEW-PAID-REGEN-AUTHORIZATION-PENDING"],
-  "status": "PLANNED"
+  "keyframe_status": "QC-CANDIDATE-v003",
+  "readiness_blockers": ["USER-FULL-MOTION-AND-AUDIO-REVIEW-PENDING"],
+  "status": "GENERATED"
 }

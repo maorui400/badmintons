@@ -24,31 +24,13 @@
       "tos_etag": "f80bc0875cf7c8fae82af08a01355167"
     },
     {
-      "asset_id": "SHOT-002-REF-03-40ea3e4f",
-      "object_key": "seedance/EP01/shared/40ea3e4fa9573c4a/SHOT-002_keyframe-sheet_v001.png",
-      "local_path": "分镜/SHOT-002_推门见球馆/关键帧/SHOT-002_keyframe-sheet_v001.png",
-      "size_bytes": 1739050,
-      "sha256": "40ea3e4fa9573c4acacf4c07fca342a8a035c7a899db01bc4889f001eed6d9cc",
+      "asset_id": "SHOT-002-REF-03-5146d4d0",
+      "object_key": "seedance/EP01/shared/5146d4d08373e456/SHOT-002_keyframe-sheet_v003.png",
+      "local_path": "分镜/SHOT-002_推门见球馆/关键帧/SHOT-002_keyframe-sheet_v003.png",
+      "size_bytes": 1765682,
+      "sha256": "5146d4d08373e456182ede1bb268647d472226142defe214e47aefa5332626d9",
       "content_type": "image/png",
-      "tos_etag": "a549b7ccd81ed7e4254622be120ffa38"
-    },
-    {
-      "asset_id": "SHOT-003-REF-02-e850071e",
-      "object_key": "seedance/EP01/shared/e850071ec664fdf5/SCENE-HALL-001_sideline_v001.png",
-      "local_path": "分镜/SCENE-HALL-001_球馆/关键帧/SCENE-HALL-001_sideline_v001.png",
-      "size_bytes": 1030239,
-      "sha256": "e850071ec664fdf5fef19f79ff689cf6e5c6f374904b5c2988a67409c3925a2b",
-      "content_type": "image/png",
-      "tos_etag": "68f88d27f56a16be2474150bc49edb5d"
-    },
-    {
-      "asset_id": "SHOT-003-REF-03-b9a0ca43",
-      "object_key": "seedance/EP01/shared/b9a0ca4355824948/SHOT-003_keyframe-sheet_v001.png",
-      "local_path": "分镜/SHOT-003_场边热身/关键帧/SHOT-003_keyframe-sheet_v001.png",
-      "size_bytes": 1998668,
-      "sha256": "b9a0ca4355824948c4f57e92f48bef5ae2d8012d37c75f00d2059080378ec5a7",
-      "content_type": "image/png",
-      "tos_etag": "534d42e0c1ea71bfa907b182140e4622"
+      "tos_etag": "0a94dce14896d62fb2d37bf1a675812e"
     },
     {
       "asset_id": "SHOT-004-REF-02-082b0dd1",
@@ -60,40 +42,13 @@
       "tos_etag": "8752298b31ed2964a1d2f2ef5a29068c"
     },
     {
-      "asset_id": "SHOT-004-REF-03-0d967210",
-      "object_key": "seedance/EP01/shared/0d9672109fd3610d/SHOT-004_keyframe-sheet_v001.png",
-      "local_path": "分镜/SHOT-004_应声上场/关键帧/SHOT-004_keyframe-sheet_v001.png",
-      "size_bytes": 1945061,
-      "sha256": "0d9672109fd3610deee7cf95864dc6a1bab201ac7f41ecfcae3209fd8eae846a",
+      "asset_id": "SHOT-004-REF-03-d2994979",
+      "object_key": "seedance/EP01/shared/d299497952c1b877/SHOT-004_keyframe-sheet_v002.png",
+      "local_path": "分镜/SHOT-004_应声上场/关键帧/SHOT-004_keyframe-sheet_v002.png",
+      "size_bytes": 1921547,
+      "sha256": "d299497952c1b8778dc57f26d1641db660c06528476b8a95ab47bacb194e3709",
       "content_type": "image/png",
-      "tos_etag": "8ca1d6cc471a6c56059d58a0a192d14a"
-    },
-    {
-      "asset_id": "SHOT-005-REF-01-97f92a6e",
-      "object_key": "seedance/EP01/shared/97f92a6ece39c371/CHAR-002_turnaround_v001_COST-C_001.png",
-      "local_path": "人物/CHAR-002_橙超/三视图/CHAR-002_turnaround_v001_COST-C_001.png",
-      "size_bytes": 2038959,
-      "sha256": "97f92a6ece39c3716e4b6e04bf26c40339b294794f150d499cd84cc91ac48fc8",
-      "content_type": "image/png",
-      "tos_etag": "0fc66de8360251004b0557af99bab35b"
-    },
-    {
-      "asset_id": "SHOT-005-REF-04-869a8900",
-      "object_key": "seedance/EP01/shared/869a8900510ec586/SHOT-005_smash-sequence_v003.png",
-      "local_path": "分镜/SHOT-005_挑球被钉/关键帧/SHOT-005_smash-sequence_v003.png",
-      "size_bytes": 2827030,
-      "sha256": "869a8900510ec586dcafb01fc2d78ab554463ab0f700a1952ab10187493ab601",
-      "content_type": "image/png",
-      "tos_etag": "961cac5c7cb24b716364f22f84a9d47f"
-    },
-    {
-      "asset_id": "SHOT-006-REF-03-1c9b7069",
-      "object_key": "seedance/EP01/shared/1c9b70698abc31d4/SHOT-006_keyframe-sheet_v001.png",
-      "local_path": "分镜/SHOT-006_杀球钉地/关键帧/SHOT-006_keyframe-sheet_v001.png",
-      "size_bytes": 2538243,
-      "sha256": "1c9b70698abc31d423c59e9762cdae6814cb90693a252de74620720b31c4876d",
-      "content_type": "image/png",
-      "tos_etag": "2da04004c981337deee54d5828bba9de"
+      "tos_etag": "a19b1321ac537098957243613a7b6ea0"
     }
   ]
 }

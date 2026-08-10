@@ -2,7 +2,7 @@
   "references": [
     {"label":"图片1","purpose":"铁蛋 v003 锁定身份、毛纹、体型、服装和装备","role":"reference_image","local_path":"人物/CHAR-001_铁蛋/三视图/CHAR-001_turnaround_v003_COST-B_001.png","remote_uri":""},
     {"label":"图片2","purpose":"SCENE-HALL-001 入口轴线锁定环境","role":"reference_image","local_path":"分镜/SCENE-HALL-001_球馆/关键帧/SCENE-HALL-001_master_v001.png","remote_uri":""},
-    {"label":"图片3","purpose":"SHOT-002 v002 三阶段关键帧联系表：左手全程持拍、右手推门、门向馆内开启","role":"reference_image","local_path":"分镜/SHOT-002_推门见球馆/关键帧/SHOT-002_keyframe-sheet_v002.png","remote_uri":""}
+    {"label":"图片3","purpose":"SHOT-002 v003 三阶段关键帧联系表：左手全程持同一支球拍、右手推门、门向馆内开启","role":"reference_image","local_path":"分镜/SHOT-002_推门见球馆/关键帧/SHOT-002_keyframe-sheet_v003.png","remote_uri":""}
   ],
   "first_frame": null,
   "last_frame": null,

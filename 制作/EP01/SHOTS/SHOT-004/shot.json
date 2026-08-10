@@ -21,6 +21,6 @@
   "dialogue_version": "DIALOGUE-v001",
   "camera_system": "BODY-NEAR + SIDE-TRACK + NET-EDGE",
   "keyframe_status": "QC-CANDIDATE-v002",
-  "readiness_blockers": ["USER-KEYFRAME-APPROVAL-PENDING", "DIALOGUE-AUDIO-MISSING", "NEW-PAID-REGEN-AUTHORIZATION-PENDING"],
-  "status": "PLANNED"
+  "readiness_blockers": ["USER-FULL-MOTION-AND-AUDIO-REVIEW-PENDING"],
+  "status": "GENERATED"
 }

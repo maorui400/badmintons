@@ -2,7 +2,7 @@
   "pipeline_version": "SEEDANCE-PIPELINE-v001",
   "episode_id": "EP01",
   "title": "工位到球馆初战",
-  "status": "PARTIAL-REGEN-PLANNED / API-DISABLED",
+  "status": "SHOT-002-v002 + SHOT-004-v002 / GENERATED / USER-REVIEW-PENDING",
   "defaults": {
     "model": "doubao-seedance-2-0-fast-260128",
     "ratio": "16:9",
@@ -29,7 +29,7 @@
     {
       "shot_id": "SHOT-002",
       "enabled": false,
-      "status": "PLANNED",
+      "status": "GENERATED",
       "shot_file": "SHOTS/SHOT-002/shot.json",
       "prompt_file": "SHOTS/SHOT-002/prompt.md",
       "assets_file": "SHOTS/SHOT-002/assets.json",
@@ -49,7 +49,7 @@
     {
       "shot_id": "SHOT-004",
       "enabled": false,
-      "status": "PLANNED",
+      "status": "GENERATED",
       "shot_file": "SHOTS/SHOT-004/shot.json",
       "prompt_file": "SHOTS/SHOT-004/prompt.md",
       "assets_file": "SHOTS/SHOT-004/assets.json",
