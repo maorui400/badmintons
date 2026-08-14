@@ -1,0 +1,12 @@
+{
+  "references": [
+    {"label":"图片1","purpose":"铁蛋 v003 锁定身份、服装和装备","role":"reference_image","local_path":"人物/CHAR-001_铁蛋/三视图/CHAR-001_turnaround_v003_COST-B_001.png","remote_uri":""},
+    {"label":"图片2","purpose":"橙超 v001 锁定身份、服装和装备","role":"reference_image","local_path":"人物/CHAR-002_橙超/三视图/CHAR-002_turnaround_v001_COST-C_001.png","remote_uri":""},
+    {"label":"图片3","purpose":"开场唯一羽毛球锁：橙超低幅起跳杀球，唯一羽毛球在空中，双方地面无球","role":"reference_image","local_path":"分镜/EP02/SHOT-001_卸力滚网/关键帧/EP02-SHOT-001_start-single-shuttle-lock_v005.png","remote_uri":""},
+    {"label":"图片4","purpose":"远场落点锁：黑网在前，网后约1.98米白色前发球线上的唯一羽毛球，橙超更后方","role":"reference_image","local_path":"分镜/EP02/SHOT-001_卸力滚网/关键帧/EP02-SHOT-001_far-court-landing-lock_v005.png","remote_uri":""}
+  ],
+  "first_frame": null,
+  "last_frame": null,
+  "action_videos": [],
+  "reference_audio": []
+}

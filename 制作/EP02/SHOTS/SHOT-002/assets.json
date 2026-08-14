@@ -1,0 +1,12 @@
+{
+  "references": [
+    {"label":"图片1","purpose":"铁蛋 v003 锁定身份、服装和装备","role":"reference_image","local_path":"人物/CHAR-001_铁蛋/三视图/CHAR-001_turnaround_v003_COST-B_001.png","remote_uri":""},
+    {"label":"图片2","purpose":"橙超 v001 锁定身份、服装和装备","role":"reference_image","local_path":"人物/CHAR-002_橙超/三视图/CHAR-002_turnaround_v001_COST-C_001.png","remote_uri":""},
+    {"label":"图片3","purpose":"三阶段动作联系表：轻声 yes、隔网打招呼与退场","role":"reference_image","local_path":"分镜/EP02/SHOT-002_轻声庆祝退场/关键帧/EP02-SHOT-002_keyframe-sheet_v005.png","remote_uri":""},
+    {"label":"图片4","purpose":"双方手性、单拍与约675mm成人拍长否决锚帧：铁蛋右手持拍右腕黑表；橙超右手持唯一球拍、左手挥手","role":"reference_image","local_path":"分镜/EP02/SHOT-002_轻声庆祝退场/关键帧/EP02-SHOT-002_greeting-racket-length-lock_v007.png","remote_uri":""}
+  ],
+  "first_frame": null,
+  "last_frame": null,
+  "action_videos": [],
+  "reference_audio": []
+}

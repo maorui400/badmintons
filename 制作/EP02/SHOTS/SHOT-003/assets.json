@@ -1,0 +1,12 @@
+{
+  "references": [
+    {"label":"图片1","purpose":"铁蛋 v003 锁定身份与服装","role":"reference_image","local_path":"人物/CHAR-001_铁蛋/三视图/CHAR-001_turnaround_v003_COST-B_001.png","remote_uri":""},
+    {"label":"图片2","purpose":"iPhone 16 Pro、钴蓝毛巾与背包锁定联系表","role":"reference_image","local_path":"人物/CHAR-001_铁蛋/道具/PROP-PACK-EP02_contact-sheet_v001.png","remote_uri":""},
+    {"label":"图片3","purpose":"五阶段动作联系表：同一长凳、解锁、点击与未读点递减","role":"reference_image","local_path":"分镜/EP02/SHOT-003_语音消息/关键帧/EP02-SHOT-003_keyframe-sheet_v003.png","remote_uri":""},
+    {"label":"图片4","purpose":"双臂透视与手表否决锚帧：右腕唯一黑表、左腕无表，肩—肘—腕—手两条连续运动链","role":"reference_image","local_path":"分镜/EP02/SHOT-003_语音消息/关键帧/EP02-SHOT-003_phone-anatomy-watch-lock_v005.png","remote_uri":""}
+  ],
+  "first_frame": null,
+  "last_frame": null,
+  "action_videos": [],
+  "reference_audio": []
+}

@@ -1,0 +1,11 @@
+{
+  "references": [
+    {"label":"图片1","purpose":"铁蛋 v003 小剪影仍需保持轮廓与装备","role":"reference_image","local_path":"人物/CHAR-001_铁蛋/三视图/CHAR-001_turnaround_v003_COST-B_001.png","remote_uri":""},
+    {"label":"图片2","purpose":"SHOT-005 最后一帧：建立硬切前45度高位机位与空间轴线","role":"reference_image","local_path":"分镜/EP02/SHOT-005_门外晚风/关键帧/EP02-SHOT-005_KF04_v002.png","remote_uri":""},
+    {"label":"图片3","purpose":"唯一构图参考：同轴线硬切后的单幅全屏远景、小主体与大环境","role":"reference_image","local_path":"分镜/EP02/SHOT-006_夏夜远景/关键帧/EP02-SHOT-006_fullscreen-wide-lock_v002.png","remote_uri":""}
+  ],
+  "first_frame": null,
+  "last_frame": null,
+  "action_videos": [],
+  "reference_audio": []
+}

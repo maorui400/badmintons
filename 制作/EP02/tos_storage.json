@@ -1,0 +1,45 @@
+{
+  "provider": "Volcengine TOS",
+  "region": "cn-beijing",
+  "endpoint": "tos-cn-beijing.volces.com",
+  "bucket": "badmintons-seedance-ep02-20260814-bd8cf2f7",
+  "acl": "private",
+  "objects": [
+    {
+      "asset_id": "EP02-SHOT-001-REF-01-bf6a7fc5",
+      "object_key": "seedance/EP02/shared/bf6a7fc5181a527e/CHAR-001_turnaround_v003_COST-B_001.png",
+      "local_path": "人物/CHAR-001_铁蛋/三视图/CHAR-001_turnaround_v003_COST-B_001.png",
+      "size_bytes": 2258307,
+      "sha256": "bf6a7fc5181a527e7595936f8a60a286ea5fe9feb9ec197080718f68d59a4bb1",
+      "content_type": "image/png",
+      "tos_etag": "54d52f504f8fecb8d5261427f573b218"
+    },
+    {
+      "asset_id": "EP02-SHOT-001-REF-02-97f92a6e",
+      "object_key": "seedance/EP02/shared/97f92a6ece39c371/CHAR-002_turnaround_v001_COST-C_001.png",
+      "local_path": "人物/CHAR-002_橙超/三视图/CHAR-002_turnaround_v001_COST-C_001.png",
+      "size_bytes": 2038959,
+      "sha256": "97f92a6ece39c3716e4b6e04bf26c40339b294794f150d499cd84cc91ac48fc8",
+      "content_type": "image/png",
+      "tos_etag": "0fc66de8360251004b0557af99bab35b"
+    },
+    {
+      "asset_id": "EP02-SHOT-001-REF-03-43834035",
+      "object_key": "seedance/EP02/shared/4383403565b17089/EP02-SHOT-001_start-single-shuttle-lock_v005.png",
+      "local_path": "分镜/EP02/SHOT-001_卸力滚网/关键帧/EP02-SHOT-001_start-single-shuttle-lock_v005.png",
+      "size_bytes": 1990614,
+      "sha256": "4383403565b17089944d3930994ca102f0be08a1929dd2b9a7ffef0f5d4599d2",
+      "content_type": "image/png",
+      "tos_etag": "83dc08b3390619c859f8f71bc716f399"
+    },
+    {
+      "asset_id": "EP02-SHOT-001-REF-04-83bacdec",
+      "object_key": "seedance/EP02/shared/83bacdec786c4b21/EP02-SHOT-001_far-court-landing-lock_v005.png",
+      "local_path": "分镜/EP02/SHOT-001_卸力滚网/关键帧/EP02-SHOT-001_far-court-landing-lock_v005.png",
+      "size_bytes": 2085177,
+      "sha256": "83bacdec786c4b2106e0e7f8c7dfbdf030cd3edd7cba91af0fe41a42c8f1305b",
+      "content_type": "image/png",
+      "tos_etag": "62952c047a9d5a025d59c9f7e1e0f6cd"
+    }
+  ]
+}

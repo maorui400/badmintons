@@ -1,0 +1,12 @@
+{
+  "references": [
+    {"label":"图片1","purpose":"铁蛋 v003 锁定身份、服装和装备","role":"reference_image","local_path":"人物/CHAR-001_铁蛋/三视图/CHAR-001_turnaround_v003_COST-B_001.png","remote_uri":""},
+    {"label":"图片2","purpose":"iPhone 16 Pro、钴蓝毛巾与背包锁定联系表","role":"reference_image","local_path":"人物/CHAR-001_铁蛋/道具/PROP-PACK-EP02_contact-sheet_v001.png","remote_uri":""},
+    {"label":"图片3","purpose":"五阶段动作联系表：擦汗、收包与开门","role":"reference_image","local_path":"分镜/EP02/SHOT-004_收包离馆/关键帧/EP02-SHOT-004_keyframe-sheet_v001.png","remote_uri":""},
+    {"label":"图片4","purpose":"出馆方向与外景透视否决锚帧：馆内相机朝外，跨门进入跑道操场","role":"reference_image","local_path":"分镜/EP02/SHOT-004_收包离馆/关键帧/EP02-SHOT-004_exit-to-field-lock_v002.png","remote_uri":""}
+  ],
+  "first_frame": null,
+  "last_frame": null,
+  "action_videos": [],
+  "reference_audio": []
+}

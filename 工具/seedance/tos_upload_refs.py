@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""Upload deduplicated assets for the currently enabled EP01 shots and mint signed URLs."""
+"""Upload deduplicated assets for enabled episode shots and mint signed URLs."""
 
 from __future__ import annotations
 
 import hashlib
+import argparse
 import json
 import mimetypes
 import os
@@ -16,13 +17,9 @@ import tos
 
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
-EPISODE_DIR = REPO_ROOT / "制作" / "EP01"
-BATCH_PATH = EPISODE_DIR / "EP01_批次清单.json"
 ENDPOINT = "tos-cn-beijing.volces.com"
 REGION = "cn-beijing"
 URL_TTL_SECONDS = 72 * 60 * 60
-STATE_PATH = EPISODE_DIR / "tos_storage.json"
-RUNTIME_PATH = EPISODE_DIR / "runtime" / "tos_assets.resolved.json"
 
 
 def read_json(path: Path) -> dict[str, Any]:
@@ -45,13 +42,13 @@ def sha256_file(path: Path) -> str:
     return digest.hexdigest()
 
 
-def load_or_make_bucket_name() -> str:
-    if STATE_PATH.exists():
-        state = read_json(STATE_PATH)
+def load_or_make_bucket_name(state_path: Path, episode_id: str) -> str:
+    if state_path.exists():
+        state = read_json(state_path)
         if state.get("bucket"):
             return str(state["bucket"])
     date_part = datetime.now(timezone.utc).strftime("%Y%m%d")
-    return f"badmintons-seedance-ep01-{date_part}-{secrets.token_hex(4)}"
+    return f"badmintons-seedance-{episode_id.lower()}-{date_part}-{secrets.token_hex(4)}"
 
 
 def collect_asset_entries(assets: dict[str, Any]) -> list[dict[str, Any]]:
@@ -65,14 +62,18 @@ def collect_asset_entries(assets: dict[str, Any]) -> list[dict[str, Any]]:
     return entries
 
 
-def collect_enabled_sources() -> list[dict[str, str]]:
-    batch = read_json(BATCH_PATH)
+def collect_enabled_sources(
+    batch_path: Path,
+    episode_dir: Path,
+    episode_id: str,
+) -> list[dict[str, str]]:
+    batch = read_json(batch_path)
     by_local_path: dict[str, dict[str, str]] = {}
     for shot in batch.get("shots") or []:
         if not shot.get("enabled", True):
             continue
         shot_id = str(shot["shot_id"])
-        assets_path = EPISODE_DIR / str(shot["assets_file"])
+        assets_path = episode_dir / str(shot["assets_file"])
         assets = read_json(assets_path)
         for index, asset in enumerate(collect_asset_entries(assets), start=1):
             local_path = str(asset.get("local_path") or "").replace("\\", "/")
@@ -87,7 +88,7 @@ def collect_enabled_sources() -> list[dict[str, str]]:
             by_local_path[local_path] = {
                 "asset_id": f"{shot_id}-REF-{index:02d}-{digest[:8]}",
                 "local_path": local_path,
-                "object_key": f"seedance/EP01/shared/{digest[:16]}/{local.name}",
+                "object_key": f"seedance/{episode_id}/shared/{digest[:16]}/{local.name}",
                 "sha256": digest,
             }
     if not by_local_path:
@@ -96,15 +97,28 @@ def collect_enabled_sources() -> list[dict[str, str]]:
 
 
 def main() -> int:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--episode", default="EP01")
+    args = parser.parse_args()
+    episode_id = str(args.episode).strip().upper()
+    if not episode_id or any(ch not in "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_" for ch in episode_id):
+        raise ValueError("Invalid episode id.")
+    episode_dir = REPO_ROOT / "制作" / episode_id
+    batch_path = episode_dir / f"{episode_id}_批次清单.json"
+    state_path = episode_dir / "tos_storage.json"
+    runtime_path = episode_dir / "runtime" / "tos_assets.resolved.json"
+    if not batch_path.is_file():
+        raise FileNotFoundError(batch_path)
+
     ak = os.environ.get("TOS_ACCESS_KEY", "").strip()
     sk = os.environ.get("TOS_SECRET_KEY", "").strip()
     if not ak or not sk:
         raise RuntimeError("TOS credentials are not available in this process.")
 
-    sources = collect_enabled_sources()
+    sources = collect_enabled_sources(batch_path, episode_dir, episode_id)
     client = tos.TosClientV2(ak, sk, ENDPOINT, REGION)
-    bucket = load_or_make_bucket_name()
-    if not STATE_PATH.exists():
+    bucket = load_or_make_bucket_name(state_path, episode_id)
+    if not state_path.exists():
         client.create_bucket(bucket, acl=tos.ACLType.ACL_Private)
 
     expires_at = datetime.now(timezone.utc) + timedelta(seconds=URL_TTL_SECONDS)
@@ -148,7 +162,7 @@ def main() -> int:
         )
 
     write_json(
-        STATE_PATH,
+        state_path,
         {
             "provider": "Volcengine TOS",
             "region": REGION,
@@ -159,7 +173,7 @@ def main() -> int:
         },
     )
     write_json(
-        RUNTIME_PATH,
+        runtime_path,
         {
             "bucket": bucket,
             "signed_url_ttl_seconds": URL_TTL_SECONDS,
@@ -176,8 +190,9 @@ def main() -> int:
                 "acl": "private",
                 "uploaded": len(resolved_assets),
                 "signed_url_ttl_hours": URL_TTL_SECONDS // 3600,
-                "state_file": str(STATE_PATH),
-                "runtime_file": str(RUNTIME_PATH),
+                "episode_id": episode_id,
+                "state_file": str(state_path),
+                "runtime_file": str(runtime_path),
             },
             ensure_ascii=False,
             indent=2,

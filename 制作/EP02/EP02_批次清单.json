@@ -1,0 +1,25 @@
+{
+  "pipeline_version": "SEEDANCE-PIPELINE-v001",
+  "episode_id": "EP02",
+  "title": "一分之后的夏夜",
+  "status": "EP02-LOCKED / USER-APPROVED-2026-08-14 / ALL-ASSETS-RETAINED / API-DISABLED",
+  "defaults": {
+    "model": "doubao-seedance-2-0-fast-260128",
+    "ratio": "16:9",
+    "resolution": "720p",
+    "generate_audio": true,
+    "return_last_frame": true
+  },
+  "api": {
+    "base_url": "https://ark.cn-beijing.volces.com/api/v3",
+    "callback_url": ""
+  },
+  "shots": [
+    {"shot_id":"EP02-SHOT-001","enabled":false,"status":"LOCKED","shot_file":"SHOTS/SHOT-001/shot.json","prompt_file":"SHOTS/SHOT-001/prompt.md","assets_file":"SHOTS/SHOT-001/assets.json","depends_on":[],"continuity_from":null},
+    {"shot_id":"EP02-SHOT-002","enabled":false,"status":"LOCKED","shot_file":"SHOTS/SHOT-002/shot.json","prompt_file":"SHOTS/SHOT-002/prompt.md","assets_file":"SHOTS/SHOT-002/assets.json","depends_on":[],"continuity_from":null},
+    {"shot_id":"EP02-SHOT-003","enabled":false,"status":"LOCKED","shot_file":"SHOTS/SHOT-003/shot.json","prompt_file":"SHOTS/SHOT-003/prompt.md","assets_file":"SHOTS/SHOT-003/assets.json","depends_on":[],"continuity_from":null},
+    {"shot_id":"EP02-SHOT-004","enabled":false,"status":"LOCKED","shot_file":"SHOTS/SHOT-004/shot.json","prompt_file":"SHOTS/SHOT-004/prompt.md","assets_file":"SHOTS/SHOT-004/assets.json","depends_on":[],"continuity_from":null},
+    {"shot_id":"EP02-SHOT-005","enabled":false,"status":"LOCKED","shot_file":"SHOTS/SHOT-005/shot.json","prompt_file":"SHOTS/SHOT-005/prompt.md","assets_file":"SHOTS/SHOT-005/assets.json","depends_on":[],"continuity_from":null},
+    {"shot_id":"EP02-SHOT-006","enabled":false,"status":"LOCKED","shot_file":"SHOTS/SHOT-006/shot.json","prompt_file":"SHOTS/SHOT-006/prompt.md","assets_file":"SHOTS/SHOT-006/assets.json","depends_on":[],"continuity_from":null}
+  ]
+}
