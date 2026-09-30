@@ -2,3 +2,9 @@
 制作/**/runtime/
 制作/**/_build/
 工具/
+
+# 技能复现验证脚手架（含与既有资产重复的复现图）
+制作/**/_skill_verify/
+
+# 本地 AI 协作记忆
+.workbuddy/

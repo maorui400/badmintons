@@ -1,0 +1,97 @@
+{
+  "episode": "EP03",
+  "version": "v003",
+  "pose_library": "bsp_pose_library_v3",
+  "fps": 24,
+  "frame_start": 1,
+  "frame_end": 720,
+  "blend_name": "EP03_骨骼IK动作预演_v003.blend",
+  "stage_collection": "EP03_RIGGED_STAGE",
+  "court": { "ox": 0, "oy": 0, "indoor": true },
+  "shuttle_name": "ONLY_SHUTTLE_EP03_ANIMATED",
+  "shuttle_start": [0, 0, 2],
+  "shuttle_action": "ACT_EP03_ONLY_SHUTTLE_PATH_v001",
+  "shuttle_interpolation": "BEZIER",
+  "rigs": [
+    {
+      "key": "tiedan",
+      "name": "TIEDAN_CHAR-001_v003",
+      "proxy_prefix": "TIEDAN",
+      "skin": "skin_td",
+      "shirt": "white",
+      "shorts": "blue",
+      "racket_color": "blue",
+      "tiedan": true,
+      "yaw": 0,
+      "action_name": "ACT_EP03_TIEDAN_RALLY_BLOCKING_v003",
+      "interpolation": "CONSTANT"
+    },
+    {
+      "key": "orange",
+      "name": "ORANGE_CHAR-002_v001",
+      "proxy_prefix": "ORANGE",
+      "skin": "skin_oc",
+      "shirt": "yellow",
+      "shorts": "black",
+      "racket_color": "red",
+      "tiedan": false,
+      "yaw": 3.141592653589793,
+      "action_name": "ACT_EP03_ORANGE_RALLY_BLOCKING_v003",
+      "interpolation": "CONSTANT"
+    }
+  ],
+  "cameras": [
+    { "id": "SHOT-001", "lens": 35, "loc": [-1.0, -8.5, 1.6], "target": [0.15, 0.65, 1.12] },
+    { "id": "SHOT-002", "lens": 20, "loc": [-5.0, -2.0, 0.18], "target": [0.0, 0.6, 1.02] },
+    { "id": "SHOT-003", "lens": 85, "loc": [4.6, -1.2, 1.35], "target": [0.25, 2.15, 1.12] },
+    { "id": "SHOT-004", "lens": 28, "loc": [-5.5, -6.5, 7.0], "target": [0.0, 0.0, 0.75] },
+    { "id": "SHOT-005", "lens": 50, "loc": [1.5, -4.8, 1.35], "target": [0.42, -3.55, 1.2] },
+    { "id": "SHOT-006", "lens": 18, "loc": [4.5, -1.0, 0.45], "target": [0.0, 1.0, 1.02] }
+  ],
+  "schedule": [
+    { "frame": 1, "label": "S1_READY", "tiedan": { "action": "stance_ready", "root": [0, -4.2, 0] }, "orange": { "action": "drive_forehand", "root": [0.3, 4.0, 0] }, "shuttle": [0.3, 2.8, 2.7] },
+    { "frame": 38, "label": "S1_CHASE", "tiedan": { "action": "step_chase_back", "root": [0.55, -4.55, 0] }, "orange": { "action": "stance_ready", "root": [-0.4, 4.1, 0] }, "shuttle": [0.35, -2.8, 2.45] },
+    { "frame": 76, "label": "S1_CLEAR_CONTACT", "tiedan": { "action": "contact_clear", "root": [0.72, -4.7, 0] }, "orange": { "action": "stance_ready", "root": [-0.65, 4.0, 0] }, "shuttle": [0.7, -4.25, 2.45] },
+    { "frame": 112, "label": "S1_RECOVER", "tiedan": { "action": "follow_clear", "root": [0.35, -4.35, 0] }, "orange": { "action": "load_overhead_smash", "root": [-1.0, 4.0, 0] }, "shuttle": [-1.0, 3.4, 3.8] },
+
+    { "frame": 121, "label": "S2_SMASH_LOAD", "tiedan": { "action": "stance_defense", "root": [0.2, -3.85, 0] }, "orange": { "action": "load_overhead_smash", "root": [-1.0, 4.0, 0] }, "shuttle": [-1.0, 3.6, 3.1] },
+    { "frame": 158, "label": "S2_LOW_JUMP", "tiedan": { "action": "stance_defense", "root": [0.15, -3.75, 0] }, "orange": { "action": "contact_smash", "root": [-1.0, 4.0, 0.1] }, "shuttle": [-1.0, 3.85, 2.55] },
+    { "frame": 196, "label": "S2_BLOCK", "tiedan": { "action": "defend_block_smash", "root": [0.1, -3.55, 0] }, "orange": { "action": "land_smash", "root": [-0.8, 3.9, 0] }, "shuttle": [0.12, -3.1, 1.18] },
+    { "frame": 232, "label": "S2_NET_EXIT", "tiedan": { "action": "defend_recover", "root": [0, -3.15, 0] }, "orange": { "action": "stance_ready", "root": [-0.6, 3.55, 0] }, "shuttle": [-0.55, 1.15, 1.62] },
+
+    { "frame": 241, "label": "S3_BLOCK_NET", "tiedan": { "action": "net_block", "root": [0, -2.75, 0] }, "orange": { "action": "stance_ready", "root": [-0.4, 3.2, 0] }, "shuttle": [-0.5, 0.65, 1.65] },
+    { "frame": 278, "label": "S3_APPROACH", "tiedan": { "action": "stance_ready", "root": [0, -2.8, 0] }, "orange": { "action": "step_approach_net", "root": [-0.25, 2.0, 0] }, "shuttle": [-0.45, 1.25, 1.2] },
+    { "frame": 316, "label": "S3_LUNGE_LIFT", "tiedan": { "action": "stance_ready", "root": [0, -3.0, 0] }, "orange": { "action": "net_lift", "root": [-0.15, 1.35, 0] }, "shuttle": [-0.2, 1.2, 0.9] },
+    { "frame": 352, "label": "S3_LIFT_EXIT", "tiedan": { "action": "step_chase_back", "root": [0.25, -3.5, 0] }, "orange": { "action": "lunge_net", "root": [-0.15, 1.5, 0] }, "shuttle": [0.35, -2.8, 3.7] },
+
+    { "frame": 361, "label": "S4_RETREAT", "tiedan": { "action": "step_chase_back", "root": [0.45, -4.0, 0] }, "orange": { "action": "stance_ready", "root": [-0.1, 2.6, 0] }, "shuttle": [0.42, -3.6, 3.35] },
+    { "frame": 398, "label": "S4_LOAD", "tiedan": { "action": "load_overhead_smash", "root": [0.75, -4.75, 0] }, "orange": { "action": "stance_defense", "root": [-0.05, 3.05, 0] }, "shuttle": [0.75, -4.2, 2.85] },
+    { "frame": 436, "label": "S4_TIEDAN_SMASH", "tiedan": { "action": "contact_smash", "root": [0.78, -4.75, 0.08] }, "orange": { "action": "defend_block_smash", "root": [-0.05, 3.25, 0] }, "shuttle": [0.75, -4.35, 2.55] },
+    { "frame": 472, "label": "S4_ORANGE_BLOCK", "tiedan": { "action": "land_smash", "root": [0.55, -4.25, 0] }, "orange": { "action": "defend_block_absorb", "root": [-0.05, 3.0, 0] }, "shuttle": [0.1, 2.65, 1.15] },
+
+    { "frame": 481, "label": "S5_DRIVE_READY", "tiedan": { "action": "stance_drive", "root": [0.25, -2.9, 0] }, "orange": { "action": "stance_drive", "root": [-0.1, 2.9, 0] }, "shuttle": [0.05, 0.3, 1.35] },
+    { "frame": 518, "label": "S5_TIEDAN_DRIVE", "tiedan": { "action": "drive_forehand", "root": [0.25, -2.75, 0] }, "orange": { "action": "stance_drive", "root": [-0.15, 2.75, 0] }, "shuttle": [0.3, -2.35, 1.25] },
+    { "frame": 556, "label": "S5_ORANGE_DRIVE", "tiedan": { "action": "stance_drive", "root": [0.2, -2.75, 0] }, "orange": { "action": "drive_forehand", "root": [-0.15, 2.7, 0] }, "shuttle": [-0.1, 2.25, 1.25] },
+    { "frame": 592, "label": "S5_REDIRECT", "tiedan": { "action": "drive_backhand", "root": [0.2, -2.65, 0] }, "orange": { "action": "stance_drive", "root": [-0.2, 2.6, 0] }, "shuttle": [0.65, -0.2, 1.3] },
+
+    { "frame": 601, "label": "S6_ORANGE_DROP", "tiedan": { "action": "stance_net", "root": [0.25, -2.7, 0] }, "orange": { "action": "shot_drop", "root": [-0.25, 2.35, 0] }, "shuttle": [-0.25, 2.0, 1.75] },
+    { "frame": 638, "label": "S6_TIEDAN_LUNGE", "tiedan": { "action": "lunge_net", "root": [0.45, -1.85, 0] }, "orange": { "action": "recover_drop", "root": [-0.25, 2.2, 0] }, "shuttle": [0.35, -0.25, 1.28] },
+    { "frame": 676, "label": "S6_TIEDAN_SAVE", "tiedan": { "action": "save_full", "root": [0.55, -1.25, 0] }, "orange": { "action": "stance_net", "root": [-0.2, 2.25, 0] }, "shuttle": [2.8, -0.45, 0.95] },
+    { "frame": 712, "label": "S6_UNRESOLVED", "tiedan": { "action": "save_recover", "root": [0.35, -1.45, 0] }, "orange": { "action": "load_overhead_smash", "root": [-0.25, 2.4, 0] }, "shuttle": [-0.2, 1.65, 2.65] }
+  ],
+  "shot_frames": {
+    "SHOT-001": [[1, "READY"], [38, "CHASE"], [76, "CLEAR_CONTACT"], [112, "RECOVER"]],
+    "SHOT-002": [[121, "SMASH_LOAD"], [158, "LOW_JUMP"], [196, "SMASH_BLOCK"], [232, "NET_EXIT"]],
+    "SHOT-003": [[241, "BLOCK_NET"], [278, "ORANGE_APPROACH"], [316, "ORANGE_LUNGE_LIFT"], [352, "LIFT_EXIT"]],
+    "SHOT-004": [[361, "RETREAT"], [398, "OVERHEAD_LOAD"], [436, "TIEDAN_SMASH"], [472, "ORANGE_BLOCK"]],
+    "SHOT-005": [[481, "DRIVE_READY"], [518, "TIEDAN_DRIVE"], [556, "ORANGE_DRIVE"], [592, "TIEDAN_REDIRECT"]],
+    "SHOT-006": [[601, "ORANGE_DROP"], [638, "TIEDAN_LUNGE"], [676, "TIEDAN_SAVE"], [712, "UNRESOLVED_END"]]
+  },
+  "render": {
+    "res_x": 960,
+    "res_y": 540,
+    "world_color": [0.002, 0.004, 0.012],
+    "look": "AgX - Medium High Contrast",
+    "restore_frame": true
+  }
+}
